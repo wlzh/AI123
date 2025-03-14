@@ -10,10 +10,10 @@
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#f9f9f9" />
 
-	<title>Hopper架构特性：DistributedSharedMemory 作者： 吃果冻不吐果冻皮 来源： 吃果冻不吐果冻皮 ####**【点击】加入大模型技术交流群** 原文：https://zhuanlan.zhihu.com/p/708645371 最近 FlashAttention3 爆火，看了下其中的技术报告，发现大量使用了 NV Hopper 架构的新特性。Ho  | AiBard123| ai工具网址导航,ai最新产品</title>
+	<title>Hopper架构特性：DistributedSharedMemory 作者： 吃果冻不吐果冻皮 来源： 吃果冻不吐果冻皮 ####**【点击】加入大模型技术交流群** 原文：https://zhuanlan.zhihu.com/p/708645371 最近 FlashAttention3 爆火，看了下其中的技术报告，发现大量使用了 NV Hopper 架构的新特性。Ho  | AI123| ai工具网址导航,ai最新产品</title>
 	<link rel="shortcut icon" href="/assets/images/favicon.png" />
     <meta name="keywords" content="chatgpt,AI,AI聊天,AI文本生成,AI绘画,AI编程,AI电商" />
-    <meta name="description" content="AiBard123 网址导航 | 免费chatgpt 汇集各类先进的人工智能产品，旨在帮助用户更快速地了解和使用这些产品,轻松地浏览不同领域的AI产品，包括语音识别、图像处理、自然语言处理。" />
+    <meta name="description" content="AI123 网址导航 | 免费chatgpt 汇集各类先进的人工智能产品，旨在帮助用户更快速地了解和使用这些产品,轻松地浏览不同领域的AI产品，包括语音识别、图像处理、自然语言处理。" />
     
     <meta name="baidu-site-verification" content="codeva-cCAOSG8MBO" />
     
@@ -79,17 +79,17 @@
                 <div class="sidebar-logo border-bottom border-color">
                     
                     <div class="logo overflow-hidden">
-                        <a href="https://aibard123.com/" class="logo-expanded">
+                        <a href="https://ai123.869hr.uk/" class="logo-expanded">
                             <img src="/assets/images/bt8-expand-light.png" height="40" class="logo-light"
-                                alt="AiBard123| ai工具网址导航,ai最新产品">
+                                alt="AI123| ai工具网址导航,ai最新产品">
                             <img src="/assets/images/bt8-expand-dark.png" height="40" class="logo-dark d-none"
-                                alt="AiBard123| ai工具网址导航,ai最新产品">
+                                alt="AI123| ai工具网址导航,ai最新产品">
                         </a>
-                        <a href="https://aibard123.com/" class="logo-collapsed">
+                        <a href="https://ai123.869hr.uk/" class="logo-collapsed">
                             <img src="/assets/images/bt.png" height="40" class="logo-light"
-                                alt="AiBard123| ai工具网址导航,ai最新产品">
+                                alt="AI123| ai工具网址导航,ai最新产品">
                             <img src="/assets/images/bt.png" height="40" class="logo-dark d-none"
-                                alt="AiBard123| ai工具网址导航,ai最新产品">
+                                alt="AI123| ai工具网址导航,ai最新产品">
                         </a>
                     </div>
                     
@@ -262,11 +262,11 @@
             <div class="navbar navbar-expand-md">
                 <div class="container-fluid p-0">
 
-                    <a href="" class="navbar-brand d-md-none" title="AiBard123| ai工具网址导航,ai最新产品">
+                    <a href="" class="navbar-brand d-md-none" title="AI123| ai工具网址导航,ai最新产品">
                         <img src="/assets/images/bt.png" class="logo-light"
-                            alt="AiBard123| ai工具网址导航,ai最新产品">
+                            alt="AI123| ai工具网址导航,ai最新产品">
                         <img src="/assets/images/bt.png" class="logo-dark d-none"
-                            alt="AiBard123| ai工具网址导航,ai最新产品">
+                            alt="AI123| ai工具网址导航,ai最新产品">
                     </a>
 
                     <div class="collapse navbar-collapse order-2 order-md-1">
@@ -406,7 +406,7 @@
             <br/>
           <ul class="meta">
             <li>
-              By <a href=https://aibard123.com/about>AiBard123</a>
+              By <a href=https://ai123.869hr.uk/about>AI123</a>
             </li>
             <li>
               <i class="fa fa-clock-o"></i>
@@ -630,7 +630,7 @@ __global__ void cluster_kernel() {
 <p>上述代码中，在 cluster.barrier_arrive() 和 cluster.barrier_wait(std::move(token)) 之间插入了 local_processing 和 map_shared_rank，这两个调用不涉及 Shared Memory 写操作，不会影响其他 Thread Block 的 process_shared_data，可以 overlap 掉部分 cluster.sync() 同步的开销。</p>
 <h4 id="3-总结">3. 总结</h4>
 <p>本文主要介绍了 Hopper 架构的新特性——Distributed Shared Memory &amp; Thread Block Clusters，并介绍了在 CUDA 上如何使用 Distributed Shared Memory。在一些对 Shared Memory需求比较大、单个 Thread Block 的 workload 较大且SM利用率较低的场景下，Distributed Shared Memory &amp; Thread Block Clusters 是个比较好的优化选项。举个例子，我个人觉得 GEMM SplitK 类（包括 Flash Decoding）算子比较适合使用 Distributed Shared Memory 做优化。Flash Decoding Kernel 可以把当前 Thread Block 的 Online Softmax 局部状态信息放到 Share Memory 中，然后同步 Thread Block Cluster，将 Cluster 中每个 Thread Block 的状态合并，得到最终结果。这样可以降低 Flash Decoding Kernel 的输出访存开销、Reduce Kernel 的输入访存开销以及 Launch 开销，从而提升 Kernel 性能。</p>
-<p>更多AI工具，参考<a href="https://aibard123.com/">Github-AiBard123</a>，<a href="https://aibard123.com/">国内AiBard123</a></p>
+<p>更多AI工具，参考<a href="https://ai123.869hr.uk/">Github-AI123</a>，<a href="https://ai123.869hr.uk/">国内AI123</a></p>
 
 
 

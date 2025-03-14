@@ -8,7 +8,7 @@
 
 ## 特色功能
 
-aibard123.com 是一个开源导航网站，旨在为爱好人工智能的人提供一个全面的资源汇总平台。它主要包含以下四个核心功能：
+ai123.869hr.uk 是一个开源导航网站，旨在为爱好人工智能的人提供一个全面的资源汇总平台。它主要包含以下四个核心功能：
 
 1. 最新AI产品介绍：展示了国内知名的AI工具和服务，为用户提供了解行业动态、快速选定合适产品的渠道。
 
@@ -44,17 +44,17 @@ aibard123.com 是一个开源导航网站，旨在为爱好人工智能的人提
 
 - AI工具导航
 
-![aibard123_screenshot](https://aibard123.com/assets/images/screenshot/shot.png)
+![ai123_screenshot](https://ai123.869hr.uk/assets/images/screenshot/shot.png)
 
 - AI日报
 
-![aibard123_screenshot](https://aibard123.com/assets/images/screenshot/aireport.png)
+![ai123_screenshot](https://ai123.869hr.uk/assets/images/screenshot/aireport.png)
 
 - AI新工具
 
-![aibard123_screenshot](https://aibard123.com/assets/images/screenshot/aitools.jpg)
+![ai123_screenshot](https://ai123.869hr.uk/assets/images/screenshot/aitools.jpg)
 
-如果想看看效果可也访问：[aibard123.com](https://aibard123.com/?github_web) 或者[aibard123.top](https://aibard123.top/?github_web)
+如果想看看效果可也访问：[ai123.869hr.uk](https://ai123.869hr.uk/?github_web) 或者[869hr.uk](https://869hr.uk/?github_web)
 
 
 #### 合作：
@@ -62,12 +62,12 @@ aibard123.com 是一个开源导航网站，旨在为爱好人工智能的人提
 如需合作可以联系QQ；1752338621
 
 
-#### 关注AiBard123公众号
+#### 关注AI123公众号
 
-AiBard123公众号推荐好玩的AI工具
+AI123公众号推荐好玩的AI工具
 
 
-![AiBard123公众号](https://aibard123.com/assets/images/screenshot/qrcode_for_gh_dde1b429630d_258.jpg)
+![AI123公众号](https://ai123.869hr.uk/assets/images/screenshot/qrcode_for_gh_dde1b429630d_258.jpg)
 
 
 感谢 [一个基于 Hugo 的静态响应式网址导航主题](https://github.com/shenweiyan/WebStack-Hugo)， 他是 在 [一个基于 Hugo 的静态响应式网址导航主题](https://github.com/shenweiyan/WebStack-Hugo)的基础上修改而来，感谢[webstack.cc](https://github.com/WebStackPage/WebStackPage.github.io) 和其他人的贡献。
